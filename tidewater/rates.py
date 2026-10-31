@@ -12,6 +12,6 @@ def compute_rate(weight_kg: float, zone: str) -> float:
     if weight_kg <= 0:
         raise ValueError("weight must be positive")
     price = weight_kg * BASE_RATE_PER_KG * zone_multiplier(zone)
-    if weight_kg > HEAVY_PARCEL_KG:
+    if weight_kg >= HEAVY_PARCEL_KG:
         price += HEAVY_SURCHARGE
     return round(price, 2)
