@@ -1,0 +1,7 @@
+[shipping]
+default_zone = "harbor"
+currency = "EUR"
+max_retries = 7
+
+[cache]
+ttl_seconds = 90

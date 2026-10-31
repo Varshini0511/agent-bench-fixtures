@@ -1,0 +1,10 @@
+[project]
+name = "tidewater"
+version = "0.4.0"
+requires-python = ">=3.10"
+
+[project.scripts]
+tidewater = "tidewater.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
