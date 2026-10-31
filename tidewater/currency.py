@@ -10,7 +10,7 @@ RATES_FROM_EUR = {
 
 
 def convert(amount_eur: float, currency: str) -> float:
-    """Convert a EUR amount, rounded to cents."""
+    """Convert a EUR amount."""
     if currency not in RATES_FROM_EUR:
         raise ValueError(f"unsupported currency {currency!r} (rates from {FX_SOURCE})")
-    return round(amount_eur * RATES_FROM_EUR[currency], 2)
+    return int(amount_eur * RATES_FROM_EUR[currency])
